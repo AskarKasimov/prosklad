@@ -3,12 +3,12 @@ import style from './Cabinet.module.scss';
 import { CustomSelect } from '../../components/CustomSelect';
 
 const Cabinet: React.FC = () => {
-  const [dob, setDob] = useState('');
-  const [region, setRegion] = useState('');
-  const [sex, setSex] = useState('');
-  const [apiKey, setApiKey] = useState('');
-  const [clientId, setClientId] = useState('');
-  const [providerId, setProviderId] = useState('');
+  const [dob, setDob] = useState<string>('');
+  const [region, setRegion] = useState<string>('');
+  const [sex, setSex] = useState<string>('');
+  const [apiKey, setApiKey] = useState<string>('');
+  const [clientId, setClientId] = useState<string>('');
+  const [providerId, setProviderId] = useState<string>('');
 
   const generateApiKey = () => {
     const newKey = 'ck_' + Math.random().toString(36).substring(2, 20);

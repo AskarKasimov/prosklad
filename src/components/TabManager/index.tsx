@@ -7,7 +7,7 @@ type TabManagerProps = {
 
 const TabManager: React.FC<TabManagerProps> = ({ tabs }) => {
   const tabNames = Object.keys(tabs);
-  const [activeTab, setActiveTab] = useState(tabNames[0]);
+  const [activeTab, setActiveTab] = useState<string>(tabNames[0]);
 
   return (
     <div className={styles.tabWrapper}>
@@ -21,7 +21,6 @@ const TabManager: React.FC<TabManagerProps> = ({ tabs }) => {
             {name}
           </div>
         ))}
-
       </div>
       <div className={styles.tabContent}>{tabs[activeTab]}</div>
     </div>

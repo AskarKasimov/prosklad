@@ -5,7 +5,7 @@ import BurgerIcon from '@assets/burger.svg?react';
 
 const Header: React.FC = () => {
   const location: string[] = useLocation().pathname.split('/');
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);

@@ -24,8 +24,8 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   disabled = false,
   className = '',
 }) => {
-  const [open, setOpen] = useState(false);
-  const [dropUp, setDropUp] = useState(false);
+  const [open, setOpen] = useState<boolean>(false);
+  const [dropUp, setDropUp] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

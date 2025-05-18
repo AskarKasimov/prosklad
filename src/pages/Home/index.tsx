@@ -1,10 +1,5 @@
-import { useEffect } from 'react';
-
 const Home = () => {
-  useEffect(() => {
-    window.location.pathname = '/cabinet';
-  }, []);
-  return <></>;
+  return <h1>Navigate to /cabinet or /auth</h1>;
 };
 
 export default Home;

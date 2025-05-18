@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import styles from '../Authorization.module.scss';
 
 const SignUp: React.FC = () => {
@@ -7,8 +7,27 @@ const SignUp: React.FC = () => {
   const [telegramId, setTelegramId] = React.useState<string>('');
   const [password, setPassword] = React.useState<string>('');
 
+  const [readyToSubmit, setReadyToSubmit] = React.useState<boolean>(false);
+
+  useEffect(() => {
+    if (
+      username.length > 0 &&
+      email.length > 0 &&
+      telegramId.length > 0 &&
+      password.length > 0
+    ) {
+      setReadyToSubmit(true);
+    } else {
+      setReadyToSubmit(false);
+    }
+  }, [username, email, telegramId, password]);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <label>
         Username
         <input
@@ -57,7 +76,11 @@ const SignUp: React.FC = () => {
         <input type="checkbox" />I have read and agree to UserHub’s terms of
         service and privacy policy.
       </label>
-      <button type="submit" className={styles.submitButton}>
+      <button
+        type="submit"
+        className={styles.submitButton}
+        disabled={!readyToSubmit}
+      >
         Get started
       </button>
     </form>

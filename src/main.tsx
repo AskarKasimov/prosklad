@@ -8,6 +8,7 @@ import { store } from './store';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import Authorization from './pages/Authorization';
+import Cabinet from './pages/Cabinet';
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'auth',
-        element: <Authorization />,
+        path: 'cabinet',
+        element: <Cabinet />,
       },
     ],
+  },
+  {
+    path: 'auth',
+    element: <Authorization />,
   },
 ]);
 

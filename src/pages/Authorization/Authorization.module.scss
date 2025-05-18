@@ -85,6 +85,12 @@
   justify-content: center;
 }
 
+@media (max-width: 1000px) {
+  .promoSection {
+    display: none;
+  }
+}
+
 .promoCard {
   width: min(640px, 30svw);
 }

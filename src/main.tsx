@@ -7,7 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { store } from './store';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
-import Additional from './pages/Additional';
+import Authorization from './pages/Authorization';
 
 const router = createBrowserRouter([
   {
@@ -19,8 +19,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/second',
-        element: <Additional />,
+        path: 'auth',
+        element: <Authorization />,
       },
     ],
   },

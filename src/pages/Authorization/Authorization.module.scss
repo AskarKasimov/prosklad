@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  font-family: sans-serif;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.formSection {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  box-shadow: 0px 0px 2px var(--gray-color);
+}
+
+.logo {
+  max-width: 80px;
+  align-self: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--gray-color);
+  margin: 0.5rem 0 1rem;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.5rem;
+  border: 1px solid var(--gray-color);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: var(--button-color);
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+}
+
+.promoSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promoCard {
+  width: min(640px, 30svw);
+}

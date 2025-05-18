@@ -11,11 +11,13 @@
   box-shadow: 0 0 1px #171a1f12, 0 0 2px #171a1f1F;
   padding: 0 1rem;
   box-sizing: border-box;
+  background-color: #FFFFFF;
 }
 
 
 .wrapper {
   width: 100%;
+  max-width: var(--page-size);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,7 +28,7 @@
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  gap: 10px;
+  gap: 3rem;
 }
 
 .logo {

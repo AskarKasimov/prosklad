@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 2rem;
+  font-family: sans-serif;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar {
+  flex: 3;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  border: solid 1px var(--outline);
+  box-shadow: 0 0 1px #171a1f12, 0 0 2px #171a1f1F;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.userBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.username {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.email {
+  font-size: var(--font-size-sm);
+  color: var(--gray-color);
+}
+
+.attributes {
+  font-size: var(--font-size-xs);
+  color: var(--gray-color);
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: solid 1px var(--outline);
+  box-shadow: 0 0 1px #171a1f12, 0 0 2px #171a1f1F;
+}
+
+.title {
+  color: black;
+  font-size: var(--font-size-xl);
+}
+
+.subtitle {
+  color: var(--gray-color);
+  font-size: var(--font-size-sm);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: var(--button-color);
+  font-size: var(--font-size-sm);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: solid 1px var(--outline);
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--button-color);
+  color: black;
+}
+
+.outlineButton {
+  background-color: var(--button-color);
+  color: black;
+  border: solid 1px var(--outline);
+}
+
+.outlineButton:hover {
+  background-color: var(--primary-color);
+  color: var(--button-color);
+}
+
+.apiKeyContainer {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.apiKeyContainer input {
+}
+
+.footer {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.subscribeContainer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

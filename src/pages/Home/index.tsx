@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
+
 const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-      <p>authorization on /auth</p>
-    </div>
-  );
+  useEffect(() => {
+    window.location.pathname = '/cabinet';
+  }, []);
+  return <></>;
 };
 
 export default Home;

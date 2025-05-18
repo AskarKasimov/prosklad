@@ -1,9 +1,12 @@
 :root {
+  --page-size: 1500px;
   --font-size-base: 16px;
+  --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-lg: 18px;
   --font-size-xl: 24px;
   --primary-color: #0071E5FF;
+  --primary-light-color: #f0f4fa;
   --outline: #EBEBEA;
   --gray-color: #8C8D8BFF;
   --button-color: #FFFFFF;
@@ -18,8 +21,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-ul, h1, p {
+ul, h1, h2, h3, p {
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -29,5 +33,34 @@ a {
 
   &:visited {
     color: inherit
+  }
+}
+
+label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: solid 1px var(--outline);
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: var(--font-size-sm);
+
+  &::placeholder {
+    color: var(--gray-color);
+  }
+
+  &:focus {
+    border-color: var(--primary-color);
   }
 }

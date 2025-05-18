@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IExample } from '../types';
+import { ProfilePayload, SUserAuth, SUserLogin } from '../types';
 
 export const projectAPI = createApi({
   reducerPath: 'API',
@@ -8,17 +8,68 @@ export const projectAPI = createApi({
     credentials: 'include', // для токена авторизации
   }),
   endpoints: (build) => ({
-    getDefault: build.query<IExample[], void>({
-      query: () => 'examples',
-    }),
-    addDefault: build.mutation<IExample, Partial<IExample>>({
+    register: build.mutation<void, SUserAuth>({
       query: (body) => ({
-        url: 'examples',
+        url: '/auth/register',
         method: 'POST',
         body,
+      }),
+    }),
+    login: build.mutation<void, SUserLogin>({
+      query: (body) => ({
+        url: '/auth/login',
+        method: 'POST',
+        body,
+      }),
+    }),
+    logout: build.mutation<void, void>({
+      query: () => ({
+        url: '/auth/logout',
+        method: 'POST',
+      }),
+    }),
+    getMe: build.query<ProfilePayload, void>({
+      query: () => ({
+        url: '/auth/me',
+        method: 'GET',
+      }),
+    }),
+    createProfile: build.mutation<void, ProfilePayload>({
+      query: (params) => ({
+        url: '/profile',
+        method: 'POST',
+        params,
+      }),
+    }),
+    getProfile: build.query<any, void>({
+      query: () => ({
+        url: '/profile',
+        method: 'GET',
+      }),
+    }),
+    editProfile: build.mutation<void, ProfilePayload>({
+      query: (params) => ({
+        url: '/profile',
+        method: 'PUT',
+        params,
+      }),
+    }),
+    deleteProfile: build.mutation<void, void>({
+      query: () => ({
+        url: '/profile',
+        method: 'DELETE',
       }),
     }),
   }),
 });
 
-export const { useAddDefaultMutation, useGetDefaultQuery } = projectAPI;
+export const {
+  useRegisterMutation,
+  useLoginMutation,
+  useLogoutMutation,
+  useGetMeQuery,
+  useCreateProfileMutation,
+  useGetProfileQuery,
+  useEditProfileMutation,
+  useDeleteProfileMutation,
+} = projectAPI;

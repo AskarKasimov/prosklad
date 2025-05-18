@@ -3,6 +3,9 @@
   z-index: 1000;
   left: 0;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 60px;
   box-shadow: 0 0 1px #171a1f12, 0 0 2px #171a1f1F;
@@ -33,6 +36,7 @@
   justify-content: start;
   gap: 10px;
   font-size: var(--font-size-lg);
+  font-weight: 600;
 
   img {
     height: 40px;
@@ -46,9 +50,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: 10px;
-
-    > li {
-    }
+    gap: 1.5rem;
   }
+}
+
+.activeNav {
+  color: var(--primary-color) !important;
+  font-weight: 600;
 }

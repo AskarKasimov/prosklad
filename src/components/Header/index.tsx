@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
-  // const location = useLocation();
+  const location: string[] = useLocation().pathname.split('/');
 
   return (
     <header className={styles.header}>
@@ -16,13 +16,40 @@ const Header: React.FC = () => {
           <nav className={styles.nav}>
             <ul>
               <li>
-                <Link to="/cabinet">Cabinet</Link>
+                <Link
+                  to="/cabinet"
+                  className={
+                    location[location.length - 1] === 'cabinet'
+                      ? styles.activeNav
+                      : ''
+                  }
+                >
+                  Cabinet
+                </Link>
               </li>
               <li>
-                <Link to="/products">Products</Link>
+                <Link
+                  to="/products"
+                  className={
+                    location[location.length - 1] === 'products'
+                      ? styles.activeNav
+                      : ''
+                  }
+                >
+                  Products
+                </Link>
               </li>
               <li>
-                <Link to="/password">Password</Link>
+                <Link
+                  to="/password"
+                  className={
+                    location[location.length - 1] === 'password'
+                      ? styles.activeNav
+                      : ''
+                  }
+                >
+                  Password
+                </Link>
               </li>
             </ul>
           </nav>

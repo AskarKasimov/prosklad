@@ -11,6 +11,13 @@
   margin: 0 auto;
 }
 
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
 .sidebar {
   flex: 3;
   padding: 1rem;
@@ -99,10 +106,8 @@
 
 .apiKeyContainer {
   display: flex;
+  flex-direction: row;
   gap: 0.5rem;
-}
-
-.apiKeyContainer input {
 }
 
 .footer {

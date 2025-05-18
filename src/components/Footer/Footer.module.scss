@@ -87,18 +87,17 @@
   }
 }
 
-//@media (max-width: 800px) {
-//  .bottom {
-//    flex-direction: column;
-//    gap: 1rem;
-//  }
-//}
-
 .links {
   > a {
-    > img {
-      width: 20px;
-      height: 20px;
+    > svg {
+      width: 30px;
+      height: 30px;
+      stroke: black;
+
+
+      &:hover {
+        stroke: var(--primary-color);
+      }
     }
   }
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import { CustomSelect } from '../CustomSelect';
+import Telegram from '@assets/tg.svg?react';
+import Github from '@assets/gh.svg?react';
 
 const Footer: React.FC = () => {
   const [lang, setLang] = React.useState<string>('en');
@@ -50,10 +52,10 @@ const Footer: React.FC = () => {
           </nav>
           <div className={styles.links}>
             <a href="#">
-              <img src="/tg.png" alt="Telegram" />
+              <Telegram />
             </a>
             <a href="#">
-              <img src="/gh.png" alt="Github" />
+              <Github />
             </a>
           </div>
         </div>

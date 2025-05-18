@@ -64,3 +64,20 @@ input[type="password"] {
     border-color: var(--primary-color);
   }
 }
+
+button {
+  background-color: var(--primary-color);
+  color: var(--button-color);
+  font-size: var(--font-size-sm);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: solid 1px var(--outline);
+  transition: color 0.2s, background-color 0.2s;
+
+
+  &:hover {
+    background-color: var(--button-color);
+    color: black;
+  }
+}

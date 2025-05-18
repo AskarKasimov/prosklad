@@ -33,22 +33,26 @@
 }
 
 .optionsList {
-  font-weight: 400;
   position: absolute;
+  z-index: 1000;
   top: 100%;
   left: 0;
-  right: 0;
-  z-index: 10;
-  background: #fff;
-  border: 1px solid #bbb;
-  border-radius: 0 0 6px 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  width: 100%;
   max-height: 200px;
   overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
 }
+
+.dropUp {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
 
 .option {
   font-weight: 400;

@@ -25,6 +25,7 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   className = '',
 }) => {
   const [open, setOpen] = useState(false);
+  const [dropUp, setDropUp] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,9 +34,19 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         setOpen(false);
       }
     };
+
     if (open) {
       document.addEventListener('mousedown', handleClickOutside);
+
+      // Проверка места снизу
+      const rect = ref.current?.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const spaceBelow = rect ? windowHeight - rect.bottom : 0;
+      const estimatedListHeight = 200; // Задайте примерную высоту списка
+
+      setDropUp(spaceBelow < estimatedListHeight);
     }
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -63,15 +74,13 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
         )}
         <span
           className={styles.arrow}
-          style={
-            open
-              ? { transform: 'rotate(225deg)' }
-              : { transform: 'rotate(45deg)' }
-          }
+          style={{
+            transform: open ? 'rotate(225deg)' : 'rotate(45deg)',
+          }}
         />
       </div>
       {open && (
-        <ul className={styles.optionsList}>
+        <ul className={`${styles.optionsList} ${dropUp ? styles.dropUp : ''}`}>
           {options.map((opt) => (
             <li
               key={opt.value}

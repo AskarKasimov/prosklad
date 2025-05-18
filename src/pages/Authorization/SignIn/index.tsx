@@ -1,9 +1,19 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import styles from '../Authorization.module.scss';
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+
+  const [readyToSubmit, setReadyToSubmit] = React.useState<boolean>(false);
+
+  useEffect(() => {
+    if (email.length > 0 && password.length > 0) {
+      setReadyToSubmit(true);
+    } else {
+      setReadyToSubmit(false);
+    }
+  }, [email, password]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,7 +43,11 @@ const SignIn: React.FC = () => {
           }
         />
       </label>
-      <button type="submit" className={styles.submitButton}>
+      <button
+        type="submit"
+        className={styles.submitButton}
+        disabled={!readyToSubmit}
+      >
         Log in
       </button>
     </form>

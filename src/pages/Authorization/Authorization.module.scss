@@ -81,6 +81,7 @@ input[type="password"] {
   font-size: var(--font-size-sm);
   font-weight: 500;
   color: var(--gray-color);
+  cursor: pointer;
 
   input[type="checkbox"] {
     width: 16px;
@@ -101,6 +102,7 @@ input[type="password"] {
 
 .submitButton:disabled {
   opacity: 0.5;
+  cursor: auto;
 }
 
 .promoSection {

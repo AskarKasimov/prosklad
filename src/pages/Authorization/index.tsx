@@ -23,7 +23,11 @@ const Authorization: React.FC = () => {
         />
       </div>
       <div className={styles.promoSection}>
-        <img className={styles.promoCard} src="/prosklad_image.png" alt="картиночка" />
+        <img
+          className={styles.promoCard}
+          src="/prosklad_image.png"
+          alt="картиночка"
+        />
       </div>
     </div>
   );

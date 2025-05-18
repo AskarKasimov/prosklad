@@ -17,7 +17,8 @@
   justify-content: center;
   align-items: center;
   max-width: 450px;
-  box-shadow: 0px 0px 2px var(--gray-color);
+  border: solid 1px var(--outline);
+  box-shadow: 0 0 1px #171a1f12, 0 0 2px #171a1f1F;
 }
 
 .logo {
@@ -27,7 +28,7 @@
 
 .title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: var(--font-size-xl);
   line-height: 32px;
   text-align: center;
 }
@@ -36,30 +37,57 @@
   color: var(--gray-color);
   margin: 0.5rem 0 1rem;
   text-align: center;
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   line-height: 20px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
   gap: 1rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  padding: 0.5rem;
-  border: 1px solid var(--gray-color);
-  border-radius: 4px;
-  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border: solid 1px var(--outline);
+  outline: none;
+  transition: border-color 0.2s;
+  font-size: var(--font-size-sm);
+
+  &::placeholder {
+    color: var(--gray-color);
+  }
+
+  &:focus {
+    border-color: var(--primary-color);
+  }
 }
 
 .checkbox {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--gray-color);
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+  }
 }
 
 .submitButton {

@@ -28,10 +28,7 @@ const Cabinet: React.FC = () => {
           <li>New York, USA</li>
           <li>Joined Jan 2023</li>
         </ul>
-        <button
-          className={`${style.button} ${style.outlineButton}`}
-          style={{ alignSelf: 'center' }}
-        >
+        <button className={style.outlineButton} style={{ alignSelf: 'center' }}>
           Edit Profile
         </button>
       </div>
@@ -91,11 +88,7 @@ const Cabinet: React.FC = () => {
                 disabled
                 placeholder="ck_************************"
               />
-              <button
-                className={`${style.button} ${style.outlineButton}`}
-                onClick={generateApiKey}
-                style={{ width: '20%' }}
-              >
+              <button className={style.outlineButton} onClick={generateApiKey}>
                 Generate New
               </button>
             </div>

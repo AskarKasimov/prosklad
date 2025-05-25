@@ -1,5 +1,6 @@
 const Home = () => {
-  return <h1>Navigate to /cabinet or /auth</h1>;
+  window.location.pathname = '/cabinet';
+  return <></>;
 };
 
 export default Home;

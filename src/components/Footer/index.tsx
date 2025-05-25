@@ -3,9 +3,16 @@ import styles from './Footer.module.scss';
 import { CustomSelect } from '../CustomSelect';
 import Telegram from '@assets/tg.svg?react';
 import Github from '@assets/gh.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
-  const [lang, setLang] = React.useState<string>('en');
+  const { i18n, t } = useTranslation();
+
+  const supportedLanguages = Object.keys(i18n.options.resources || {}).map(
+    (lng) => ({
+      value: lng,
+    })
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -16,37 +23,34 @@ const Footer: React.FC = () => {
         <div className={styles.central}>
           <p className={styles.title}>PROSklad</p>
           <form className={styles.form} onSubmit={handleSubmit}>
-            <p>Stay up to date</p>
+            <p>{t('footer.subscriptionSlogan')}</p>
             <div>
-              <input type="email" placeholder="Your email address" />
+              <input type="email" placeholder={t('form.emailPlaceholder')} />
               <button type="submit">Subscribe</button>
             </div>
           </form>
         </div>
         <div className={styles.bottom}>
           <CustomSelect
-            options={[
-              { value: 'en', label: 'English' },
-              { value: 'ru', label: 'Русский' },
-            ]}
-            value={lang}
+            options={supportedLanguages}
+            value={i18n.language}
             onChange={(value: string) => {
-              setLang(value);
+              i18n.changeLanguage(value);
             }}
           />
           <nav>
             <ul>
               <li>
-                <a href="#">© 2025 UserHub</a>
+                <a href="#">© 2025 ProSklad</a>
               </li>
               <li>
-                <a href="#">Terms of Service</a>
+                <a href="#">{t('footer.termsOfUse')}</a>
               </li>
               <li>
-                <a href="#">Privacy Policy</a>
+                <a href="#">{t('footer.privacyPolicy')}</a>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <a href="#">{t('footer.contactUs')}</a>
               </li>
             </ul>
           </nav>

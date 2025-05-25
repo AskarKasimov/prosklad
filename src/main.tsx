@@ -11,7 +11,7 @@ import Authorization from './pages/Authorization';
 import Cabinet from './pages/Cabinet';
 import Products from './pages/Products';
 import Password from './pages/Password';
-import './i18n.ts'; // язык
+import './i18n/i18n.ts'; // язык
 
 const router = createBrowserRouter([
   {

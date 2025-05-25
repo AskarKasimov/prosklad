@@ -1,0 +1,11 @@
+{
+  "form": {
+    "emailPlaceholder": "Ваш email-адрес"
+  },
+  "footer": {
+    "subscriptionSlogan": "Будьте в курсе событий",
+    "termsOfUse": "Условия пользования",
+    "privacyPolicy": "Политика конфиденциальности",
+    "contactUs": "Контакты"
+  }
+}

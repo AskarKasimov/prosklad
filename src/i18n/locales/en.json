@@ -1,0 +1,11 @@
+{
+  "form": {
+    "emailPlaceholder": "Your email address"
+  },
+  "footer": {
+    "subscriptionSlogan": "Stay up to date",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "contactUs": "Contact Us"
+  }
+}

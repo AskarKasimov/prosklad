@@ -12,11 +12,13 @@ i18n
       ru: { translation: ruTranslation },
       en: { translation: enTranslation },
     },
+    detection: {
+      order: ['localStorage', 'navigator'],
+      caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+    },
     fallbackLng: 'ru',
-    debug: false,
     interpolation: {
       escapeValue: false,
     },
   });
-
-export default i18n;

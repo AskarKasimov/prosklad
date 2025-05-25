@@ -2,6 +2,11 @@
   "form": {
     "emailPlaceholder": "Your email address"
   },
+  "header": {
+    "cabinet": "Cabinet",
+    "products": "Products",
+    "password": "Password"
+  },
   "footer": {
     "subscriptionSlogan": "Stay up to date",
     "termsOfUse": "Terms of Use",

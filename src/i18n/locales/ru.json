@@ -2,6 +2,11 @@
   "form": {
     "emailPlaceholder": "Ваш email-адрес"
   },
+  "header": {
+    "cabinet": "Личный кабинет",
+    "products": "Продукты",
+    "password": "Пароль"
+  },
   "footer": {
     "subscriptionSlogan": "Будьте в курсе событий",
     "termsOfUse": "Условия пользования",

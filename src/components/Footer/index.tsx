@@ -8,12 +8,6 @@ import { useTranslation } from 'react-i18next';
 const Footer: React.FC = () => {
   const { i18n, t } = useTranslation();
 
-  const supportedLanguages = Object.keys(i18n.options.resources || {}).map(
-    (lng) => ({
-      value: lng,
-    })
-  );
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
@@ -32,7 +26,9 @@ const Footer: React.FC = () => {
         </div>
         <div className={styles.bottom}>
           <CustomSelect
-            options={supportedLanguages}
+            options={Object.keys(i18n.options.resources || {}).map((lng) => ({
+              value: lng,
+            }))}
             value={i18n.language}
             onChange={(value: string) => {
               i18n.changeLanguage(value);

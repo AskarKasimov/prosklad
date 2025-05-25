@@ -21,6 +21,14 @@ body {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  height: 100svh;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul, h1, h2, h3, p {
@@ -86,5 +94,15 @@ button {
   &:hover {
     background-color: var(--button-color);
     color: black;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  &:disabled:hover { // отключить hover
+    background-color: var(--primary-color);
+    color: var(--button-color);
   }
 }

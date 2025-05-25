@@ -1,7 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import styles from '../Authorization.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const SignIn: React.FC = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
 
@@ -22,10 +24,10 @@ const SignIn: React.FC = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <label>
-        Email
+        {t('form.emailLabel')}
         <input
           type="email"
-          placeholder="your.email@example.com"
+          placeholder={t('form.emailPlaceholder')}
           value={email}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setEmail(e.target.value)
@@ -33,10 +35,10 @@ const SignIn: React.FC = () => {
         />
       </label>
       <label>
-        Password
+        {t('form.passwordLabel')}
         <input
           type="password"
-          placeholder="********"
+          placeholder={t('form.passwordPlaceholder')}
           value={password}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setPassword(e.target.value)
@@ -48,7 +50,7 @@ const SignIn: React.FC = () => {
         className={styles.submitButton}
         disabled={!readyToSubmit}
       >
-        Log in
+        {t('auth.signInSubmit')}
       </button>
     </form>
   );

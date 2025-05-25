@@ -1,11 +1,25 @@
 {
   "form": {
-    "emailPlaceholder": "Your email address"
+    "emailLabel": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "********",
+    "usernameLabel": "Username",
+    "usernamePlaceholder": "example123"
   },
   "header": {
     "cabinet": "Cabinet",
     "products": "Products",
     "password": "Password"
+  },
+  "auth": {
+    "title": "Your PROSklad Account",
+    "subtitle": "Join us to manage your user data and explore powerful product insights",
+    "signInTab": "Log in",
+    "signUpTab": "Create account",
+    "signInSubmit": "Sign in",
+    "signUpSubmit": "Get started",
+    "privacyCheckbox": "I have read and agree to UserHub’s terms of service and privacy policy"
   },
   "footer": {
     "subscriptionSlogan": "Stay up to date",

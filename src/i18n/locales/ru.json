@@ -1,0 +1,30 @@
+{
+  "form": {
+    "emailLabel": "Почта",
+    "emailPlaceholder": "your.email@example.com",
+    "passwordLabel": "Пароль",
+    "passwordPlaceholder": "********",
+    "usernameLabel": "Логин",
+    "usernamePlaceholder": "example123"
+  },
+  "header": {
+    "cabinet": "Личный кабинет",
+    "products": "Продукты",
+    "password": "Пароль"
+  },
+  "auth": {
+    "title": "Учётная запись PROSklad",
+    "subtitle": "Присоединяйтесь к нам, чтобы управлять своими пользовательскими данными и получать полезную информацию о продуктах",
+    "signInTab": "Войти",
+    "signUpTab": "Создать аккаунт",
+    "signInSubmit": "Войти",
+    "signUpSubmit": "Приступить к работе",
+    "privacyCheckbox": "Я ознакомился с условиями предоставления услуг и политикой конфиденциальности PROSklad и согласен с ними"
+  },
+  "footer": {
+    "subscriptionSlogan": "Будьте в курсе событий",
+    "termsOfUse": "Условия пользования",
+    "privacyPolicy": "Политика конфиденциальности",
+    "contactUs": "Контакты"
+  }
+}

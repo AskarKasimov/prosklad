@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import { Link, useLocation } from 'react-router-dom';
 import BurgerIcon from '@assets/burger.svg?react';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   const location: string[] = useLocation().pathname.split('/');
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
@@ -32,7 +34,7 @@ const Header: React.FC = () => {
                       : ''
                   }
                 >
-                  Cabinet
+                  {t('header.cabinet')}
                 </Link>
               </li>
               <li>
@@ -44,7 +46,7 @@ const Header: React.FC = () => {
                       : ''
                   }
                 >
-                  Products
+                  {t('header.products')}
                 </Link>
               </li>
               <li>
@@ -56,7 +58,7 @@ const Header: React.FC = () => {
                       : ''
                   }
                 >
-                  Password
+                  {t('header.password')}
                 </Link>
               </li>
             </ul>

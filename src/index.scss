@@ -21,6 +21,14 @@ body {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  height: 100svh;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 ul, h1, h2, h3, p {

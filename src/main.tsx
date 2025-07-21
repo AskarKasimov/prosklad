@@ -5,13 +5,13 @@ import App from './App.tsx';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { store } from './store';
-import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import Authorization from './pages/Authorization';
 import Cabinet from './pages/Cabinet';
 import Products from './pages/Products';
 import Password from './pages/Password';
-import './i18n.ts'; // язык
+import './i18n/i18n.ts';
+import { ToastContainer } from 'react-toastify'; // язык
 
 const router = createBrowserRouter([
   {

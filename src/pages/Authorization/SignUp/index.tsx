@@ -1,7 +1,9 @@
 import React, { ChangeEvent, useEffect } from 'react';
 import styles from '../Authorization.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const SignUp: React.FC = () => {
+  const { t } = useTranslation();
   const [username, setUsername] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [telegramId, setTelegramId] = React.useState<string>('');
@@ -29,10 +31,10 @@ const SignUp: React.FC = () => {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <label>
-        Username
+        {t('form.usernameLabel')}
         <input
           type="text"
-          placeholder="Your unique username"
+          placeholder={t('form.usernamePlaceholder')}
           value={username}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setUsername(e.target.value)
@@ -40,10 +42,10 @@ const SignUp: React.FC = () => {
         />
       </label>
       <label>
-        Email
+        {t('form.emailLabel')}
         <input
           type="email"
-          placeholder="your.email@example.com"
+          placeholder={t('form.emailPlaceholder')}
           value={email}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setEmail(e.target.value)
@@ -62,10 +64,10 @@ const SignUp: React.FC = () => {
         />
       </label>
       <label>
-        Password
+        {t('form.passwordLabel')}
         <input
           type="password"
-          placeholder="********"
+          placeholder={t('form.passwordPlaceholder')}
           value={password}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setPassword(e.target.value)
@@ -73,15 +75,15 @@ const SignUp: React.FC = () => {
         />
       </label>
       <label className={styles.checkbox}>
-        <input type="checkbox" />I have read and agree to UserHub’s terms of
-        service and privacy policy.
+        <input type="checkbox" />
+        {t('auth.privacyCheckbox')}
       </label>
       <button
         type="submit"
         className={styles.submitButton}
         disabled={!readyToSubmit}
       >
-        Get started
+        {t('auth.signUpSubmit')}
       </button>
     </form>
   );
